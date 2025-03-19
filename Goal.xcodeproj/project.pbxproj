@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF12D8B335200DC843D /* TabBarController.swift */; };
+		F809ECF42D8B339D00DC843D /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */; };
+		F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF52D8B33C500DC843D /* ResultsViewController.swift */; };
+		F809ECF82D8B33D600DC843D /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF72D8B33D600DC843D /* FavoriteViewController.swift */; };
+		F809ECFA2D8B33E600DC843D /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF92D8B33E600DC843D /* StatisticViewController.swift */; };
 		F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A383F22D87371800FC3730 /* AppDelegate.swift */; };
 		F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A383F42D87371800FC3730 /* SceneDelegate.swift */; };
 		F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8A383FB2D87371800FC3730 /* Goal.xcdatamodeld */; };
@@ -15,7 +20,6 @@
 		F8A3840D2D87371B00FC3730 /* GoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3840C2D87371B00FC3730 /* GoalTests.swift */; };
 		F8A384172D87371B00FC3730 /* GoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A384162D87371B00FC3730 /* GoalUITests.swift */; };
 		F8A384192D87371B00FC3730 /* GoalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A384182D87371B00FC3730 /* GoalUITestsLaunchTests.swift */; };
-		F8A6F3F12D8B31FF00238DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F809ECF12D8B335200DC843D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		F809ECF52D8B33C500DC843D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		F809ECF72D8B33D600DC843D /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		F809ECF92D8B33E600DC843D /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		F8A383EF2D87371800FC3730 /* Goal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A383F22D87371800FC3730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A383F42D87371800FC3730 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +57,6 @@
 		F8A384122D87371B00FC3730 /* GoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A384162D87371B00FC3730 /* GoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUITests.swift; sourceTree = "<group>"; };
 		F8A384182D87371B00FC3730 /* GoalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +113,11 @@
 				F8A384002D87371A00FC3730 /* LaunchScreen.storyboard */,
 				F8A384032D87371A00FC3730 /* Info.plist */,
 				F8A383FB2D87371800FC3730 /* Goal.xcdatamodeld */,
-				F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */,
+				F809ECF12D8B335200DC843D /* TabBarController.swift */,
+				F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */,
+				F809ECF52D8B33C500DC843D /* ResultsViewController.swift */,
+				F809ECF72D8B33D600DC843D /* FavoriteViewController.swift */,
+				F809ECF92D8B33E600DC843D /* StatisticViewController.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			files = (
 				F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */,
 				F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */,
-				F8A6F3F12D8B31FF00238DC6 /* ViewController.swift in Sources */,
+				F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */,
+				F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */,
 				F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */,
+				F809ECFA2D8B33E600DC843D /* StatisticViewController.swift in Sources */,
+				F809ECF82D8B33D600DC843D /* FavoriteViewController.swift in Sources */,
+				F809ECF42D8B339D00DC843D /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
