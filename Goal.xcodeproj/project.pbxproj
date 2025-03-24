@@ -20,6 +20,7 @@
 		F8A3840D2D87371B00FC3730 /* GoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A3840C2D87371B00FC3730 /* GoalTests.swift */; };
 		F8A384172D87371B00FC3730 /* GoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A384162D87371B00FC3730 /* GoalUITests.swift */; };
 		F8A384192D87371B00FC3730 /* GoalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A384182D87371B00FC3730 /* GoalUITestsLaunchTests.swift */; };
+		F8D91C932D8C963B000176D9 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D91C922D8C963B000176D9 /* StandingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F8A384122D87371B00FC3730 /* GoalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A384162D87371B00FC3730 /* GoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUITests.swift; sourceTree = "<group>"; };
 		F8A384182D87371B00FC3730 /* GoalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F8D91C922D8C963B000176D9 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				F809ECF52D8B33C500DC843D /* ResultsViewController.swift */,
 				F809ECF72D8B33D600DC843D /* FavoriteViewController.swift */,
 				F809ECF92D8B33E600DC843D /* StatisticViewController.swift */,
+				F8D91C922D8C963B000176D9 /* StandingsViewController.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */,
 				F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */,
+				F8D91C932D8C963B000176D9 /* StandingsViewController.swift in Sources */,
 				F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */,
 				F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */,
 				F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */,
