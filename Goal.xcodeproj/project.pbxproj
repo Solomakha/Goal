@@ -16,6 +16,7 @@
 		F8A384172D87371B00FC3730 /* GoalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A384162D87371B00FC3730 /* GoalUITests.swift */; };
 		F8A384192D87371B00FC3730 /* GoalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A384182D87371B00FC3730 /* GoalUITestsLaunchTests.swift */; };
 		F8A6F3F12D8B31FF00238DC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */; };
+		F8CCB0DA2D92F6AC00786187 /* NextMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CCB0D92D92F6AC00786187 /* NextMatchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F8A384162D87371B00FC3730 /* GoalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUITests.swift; sourceTree = "<group>"; };
 		F8A384182D87371B00FC3730 /* GoalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8CCB0D92D92F6AC00786187 /* NextMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMatchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F8A384032D87371A00FC3730 /* Info.plist */,
 				F8A383FB2D87371800FC3730 /* Goal.xcdatamodeld */,
 				F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */,
+				F8CCB0D92D92F6AC00786187 /* NextMatchTableViewCell.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */,
 				F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */,
+				F8CCB0DA2D92F6AC00786187 /* NextMatchTableViewCell.swift in Sources */,
 				F8A6F3F12D8B31FF00238DC6 /* ViewController.swift in Sources */,
 				F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */,
 			);
