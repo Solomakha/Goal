@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9D49E32DDA723600A564E1 /* LiveMatchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D49E22DDA723600A564E1 /* LiveMatchCollectionViewCell.swift */; };
 		F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A383F22D87371800FC3730 /* AppDelegate.swift */; };
 		F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A383F42D87371800FC3730 /* SceneDelegate.swift */; };
 		F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8A383FB2D87371800FC3730 /* Goal.xcdatamodeld */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9D49E22DDA723600A564E1 /* LiveMatchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8A383EF2D87371800FC3730 /* Goal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A383F22D87371800FC3730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A383F42D87371800FC3730 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				F8A384032D87371A00FC3730 /* Info.plist */,
 				F8A383FB2D87371800FC3730 /* Goal.xcdatamodeld */,
 				F8A6F3F02D8B31FF00238DC6 /* ViewController.swift */,
+				0A9D49E22DDA723600A564E1 /* LiveMatchCollectionViewCell.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */,
+				0A9D49E32DDA723600A564E1 /* LiveMatchCollectionViewCell.swift in Sources */,
 				F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */,
 				F8A6F3F12D8B31FF00238DC6 /* ViewController.swift in Sources */,
 				F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */,
