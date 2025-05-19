@@ -9,7 +9,6 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         matchView.translatesAutoresizingMaskIntoConstraints = false
         //matchView.backgroundColor = .clear
         matchView.layer.cornerRadius = 25
-        //matchView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         matchView.clipsToBounds = true
         matchView.layer.shadowColor = UIColor.black.cgColor
         matchView.layer.shadowOpacity = 0.15
@@ -29,9 +28,7 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         return imageView
     }()
-    
-    //____________________________
-    
+
     private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -111,27 +108,11 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-//    private lazy var centerDataStackView: UIStackView = {
-//        let stackView = UIStackView(arrangedSubviews: [timeLabel, dateLabel])
-//        stackView.axis = .horizontal
-//        stackView.spacing = 4
-//        stackView.alignment = .center
-//        return stackView
-//    }()
-//
-//    private let timeLabel: UILabel = {
-//        let label = UILabel()
-//        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-//        label.textColor = .white
-//        return label
-//    }()
-//
-//    private let dateLabel: UILabel = {
-//        let label = UILabel()
-//        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
-//        label.textColor = UIColor(white: 1, alpha: 0.6)
-//        return label
-//    }()
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        onAirView.layer.removeAnimation(forKey: "blink")
+        startBlinkingOnAirView()
+    }
     
     private let stadiumLabel: UILabel = {
         let label = UILabel()
@@ -201,7 +182,6 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         
         matchStackView.addArrangedSubview(homeStack)
         matchStackView.addArrangedSubview(resultLabel)
-        //matchStackView.addArrangedSubview(centerDataStackView)
         matchStackView.addArrangedSubview(awayStack)
         
         liveStackView.addArrangedSubview(onAirView)
@@ -237,7 +217,7 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         contentView.addSubview(matchView)
-        startBlinkingOnAirView()
+        prepareForReuse()
         NSLayoutConstraint.activate([
             matchView.topAnchor.constraint(equalTo: contentView.topAnchor),
             matchView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
