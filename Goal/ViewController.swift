@@ -80,7 +80,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LiveMatchCollectionViewCell.identifier, for: indexPath) as! LiveMatchCollectionViewCell
         cell.configure(backgroundColorName: systemColors[indexPath.row], logo: systemImages[indexPath.row])
         //cell.backgroundColor = systemColors[indexPath.row]
-        cell.configureMatch(homeTeam: "Real Madrid", awayTeam: "Barselona", homeTeamImage: "real", awayTeamImage: "barsa", time: "1", date: "2", stadium: "Estadio Nacional de Fútbol", city: "Managua")
+        cell.configureMatch(liga: "La Liga", homeTeam: "Real Madrid", awayTeam: "Barselona", homeTeamImage: "real", awayTeamImage: "barsa", time: "1", date: "2", stadium: "Estadio Nacional de Fútbol", city: "Managua")
         
         return cell
     }

@@ -161,7 +161,18 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         liveLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         liveLabel.text = "Live"
         liveLabel.textColor = .black
+        liveLabel.translatesAutoresizingMaskIntoConstraints = false
         return liveLabel
+    }()
+    
+    private let ligaLabel: UILabel = {
+        let ligaLabel = UILabel()
+        ligaLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        ligaLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        ligaLabel.text = "LIGA"
+        ligaLabel.textColor = .black
+        ligaLabel.translatesAutoresizingMaskIntoConstraints = false
+        return ligaLabel
     }()
     
     private lazy var liveStackView: UIStackView = {
@@ -183,6 +194,7 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         matchView.addSubview(imageView)
         matchView.addSubview(containerStackView)
         matchView.addSubview(liveStackView)
+        matchView.addSubview(ligaLabel)
         
         let homeStack = homeTeamStackView(imageView: homeCommandImageView, titleLabel: homeCommandTitle)
         let awayStack = awayTeamStackView(imageView: awayCommandImageView, titleLabel: awayCommandTitle)
@@ -212,7 +224,7 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
         matchView.backgroundColor = backgroundColorName
     }
     
-    func configureMatch(homeTeam: String, awayTeam: String, homeTeamImage: String, awayTeamImage: String, time: String, date: String, stadium: String, city: String) {
+    func configureMatch(liga: String, homeTeam: String, awayTeam: String, homeTeamImage: String, awayTeamImage: String, time: String, date: String, stadium: String, city: String) {
         homeCommandTitle.text = homeTeam
         awayCommandTitle.text = awayTeam
         homeCommandImageView.image = UIImage(named: homeTeamImage)
@@ -220,6 +232,7 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
 //        timeLabel.text = time
 //        dateLabel.text = date
         stadiumLabel.text = "\(stadium), \(city)"
+        ligaLabel.text = liga
     }
     
     private func setupView() {
@@ -240,6 +253,9 @@ class LiveMatchCollectionViewCell: UICollectionViewCell {
             liveStackView.topAnchor.constraint(equalTo: matchView.topAnchor, constant: 10),
             liveStackView.trailingAnchor.constraint(equalTo: matchView.trailingAnchor, constant: -15),
             
+            ligaLabel.topAnchor.constraint(equalTo: matchView.topAnchor, constant: 10),
+            ligaLabel.leadingAnchor.constraint(equalTo: matchView.leadingAnchor, constant: 15),
+
             containerStackView.topAnchor.constraint(equalTo: liveStackView.bottomAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: matchView.bottomAnchor, constant: -12),
             containerStackView.leadingAnchor.constraint(equalTo: matchView.leadingAnchor, constant: 5),
