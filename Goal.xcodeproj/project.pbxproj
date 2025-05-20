@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1E91BB2DDCFBB900FF3BB0 /* LiveMatchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E91BA2DDCFBB900FF3BB0 /* LiveMatchCollectionViewCell.swift */; };
 		F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF12D8B335200DC843D /* TabBarController.swift */; };
 		F809ECF42D8B339D00DC843D /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */; };
 		F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF52D8B33C500DC843D /* ResultsViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1E91BA2DDCFBB900FF3BB0 /* LiveMatchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveMatchCollectionViewCell.swift; sourceTree = "<group>"; };
 		F809ECF12D8B335200DC843D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		F809ECF52D8B33C500DC843D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F809ECF52D8B33C500DC843D /* ResultsViewController.swift */,
 				F809ECF72D8B33D600DC843D /* FavoriteViewController.swift */,
 				F809ECF92D8B33E600DC843D /* StatisticViewController.swift */,
+				0A1E91BA2DDCFBB900FF3BB0 /* LiveMatchCollectionViewCell.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A383FD2D87371800FC3730 /* Goal.xcdatamodeld in Sources */,
+				0A1E91BB2DDCFBB900FF3BB0 /* LiveMatchCollectionViewCell.swift in Sources */,
 				F8A383F32D87371800FC3730 /* AppDelegate.swift in Sources */,
 				F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */,
 				F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */,
