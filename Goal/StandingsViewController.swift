@@ -2,6 +2,7 @@ import UIKit
 
 class StandingsViewController: UIViewController {
     
+    
     private var headerLabel: UILabel = {
         let label = UILabel()
         label.text = "Турнирная таблица"
@@ -25,27 +26,26 @@ class StandingsViewController: UIViewController {
         tableView.backgroundColor = .white
         tableView.dataSource = self
         tableView.delegate = self
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.separatorStyle = .none
+        tableView.register(TeamTableViewCell.self, forCellReuseIdentifier: "TeamCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
     
+    var teams: [Team] = []
     
-    //    private let scrollView: UIScrollView = {
-    //        let view = UIScrollView()
-    //        view.translatesAutoresizingMaskIntoConstraints = false
-    //        return view
-    //    }()
-    //
-    //    private let scrollStackViewContainer: UIStackView = {
-    //        let view = UIStackView()
-    //        view.axis = .vertical
-    //        view.spacing = 5
-    //        view.translatesAutoresizingMaskIntoConstraints = false
-    //        return view
-    //    }()
+    func loadTeams() {
+        // Загрузить реальные изображения и данные
+        teams = [
+            Team(position: 1, name: "Arsenal", logo: UIImage(named: "favorite")!, gamesPlayed: 14, goalDifference: 22, points: 37, isFavorite: true),
+            Team(position: 2, name: "Manchester City", logo: UIImage(named: "home")!, gamesPlayed: 14, goalDifference: 26, points: 32, isFavorite: false),
+            // Добавить остальные команды...
+        ]
+        tableView.reloadData()
+    }
+    
+    
     //
     //    private let subView1: UIView = {
     //        let view = UIView()
@@ -101,7 +101,7 @@ class StandingsViewController: UIViewController {
         viewWithTable.addSubview(tableView)
         
         addConstraints()
-        //setupScrollView()
+        loadTeams()
     }
     
     func addConstraints() {
@@ -130,12 +130,14 @@ class StandingsViewController: UIViewController {
 extension StandingsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TeamCell", for: indexPath) as? TeamTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: teams[indexPath.row])
         return cell
     }
     

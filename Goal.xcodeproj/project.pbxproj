@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1E91B72DDCD2FD00FF3BB0 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E91B62DDCD2FD00FF3BB0 /* TeamTableViewCell.swift */; };
+		0A1E91B92DDCDA3500FF3BB0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1E91B82DDCDA3500FF3BB0 /* Team.swift */; };
 		F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF12D8B335200DC843D /* TabBarController.swift */; };
 		F809ECF42D8B339D00DC843D /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */; };
 		F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809ECF52D8B33C500DC843D /* ResultsViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1E91B62DDCD2FD00FF3BB0 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		0A1E91B82DDCDA3500FF3BB0 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		F809ECF12D8B335200DC843D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F809ECF32D8B339D00DC843D /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		F809ECF52D8B33C500DC843D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				F809ECF72D8B33D600DC843D /* FavoriteViewController.swift */,
 				F809ECF92D8B33E600DC843D /* StatisticViewController.swift */,
 				F8D91C922D8C963B000176D9 /* StandingsViewController.swift */,
+				0A1E91B62DDCD2FD00FF3BB0 /* TeamTableViewCell.swift */,
+				0A1E91B82DDCDA3500FF3BB0 /* Team.swift */,
 			);
 			path = Goal;
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 				F809ECF62D8B33C500DC843D /* ResultsViewController.swift in Sources */,
 				F809ECF22D8B335200DC843D /* TabBarController.swift in Sources */,
 				F8A383F52D87371800FC3730 /* SceneDelegate.swift in Sources */,
+				0A1E91B72DDCD2FD00FF3BB0 /* TeamTableViewCell.swift in Sources */,
 				F809ECFA2D8B33E600DC843D /* StatisticViewController.swift in Sources */,
+				0A1E91B92DDCDA3500FF3BB0 /* Team.swift in Sources */,
 				F809ECF82D8B33D600DC843D /* FavoriteViewController.swift in Sources */,
 				F809ECF42D8B339D00DC843D /* MainScreenViewController.swift in Sources */,
 			);
