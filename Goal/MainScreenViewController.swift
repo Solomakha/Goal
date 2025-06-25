@@ -9,10 +9,56 @@ class MainScreenViewController: UIViewController {
         notificationImage: UIImage(named: "notification_call")
     )
     
+    // Array of system image names
+    let systemImages = ["Bundesliga", "Europa_League", "Italian-Serie-A",
+                        "ligue-1", "LL", "premier",
+                        "UEFA_Champions_Leagues"]
+    let systemColors: [UIColor] = [
+        .systemRed,
+        .systemGreen,
+        .systemBlue,
+        .systemOrange,
+        .systemYellow,
+        .systemPink,
+        .systemPurple,
+        .systemTeal,
+        .systemIndigo,
+        .systemGray,
+        .systemGray2,
+        .systemGray3,
+        .systemGray4,
+        .systemGray5,
+        .systemGray6
+    ]
+    
+    // Lazy initialization of the UICollectionView
+    private lazy var mainCollectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.minimumLineSpacing = 0
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.register(LiveMatchCollectionViewCell.self, forCellWithReuseIdentifier: LiveMatchCollectionViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .clear
+        collectionView.isPagingEnabled = true
+        collectionView.decelerationRate = .fast
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavigationBar()
+        setupView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        view.layoutIfNeeded()
     }
     
     private func setupNavigationBar() {
@@ -67,8 +113,6 @@ class MainScreenViewController: UIViewController {
         imageContact.frame = CGRect(x: 5, y: 0, width: 40, height: 40)
         view.addSubview(imageContact)
         
-        
-        
         let titleLabel = UILabel()
         titleLabel.attributedText = coloredText(
             fullText: title,
@@ -96,19 +140,56 @@ class MainScreenViewController: UIViewController {
     func coloredText(fullText: String, firstLettersCount: Int, firstColor: UIColor, remainingColor: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: fullText)
         
-        // Если длина слова меньше firstLettersCount, то красим весь текст первым цветом
         if fullText.count <= firstLettersCount {
             attributedString.addAttribute(.foregroundColor, value: firstColor, range: NSRange(location: 0, length: fullText.count))
             return attributedString
         }
         
-        // Красим первые буквы
         attributedString.addAttribute(.foregroundColor, value: firstColor, range: NSRange(location: 0, length: firstLettersCount))
         
-        // Красим оставшуюся часть
         attributedString.addAttribute(.foregroundColor, value: remainingColor, range: NSRange(location: firstLettersCount, length: fullText.count - firstLettersCount))
         
         return attributedString
     }
     
+    func reloadCollectionView() {
+        DispatchQueue.main.async { [weak self] in
+            self?.mainCollectionView.reloadData()
+        }
+    }
+    
+    private func setupView() {
+        view.addSubview(mainCollectionView)
+        NSLayoutConstraint.activate([
+            mainCollectionView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: 10),
+            mainCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            mainCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+
+            mainCollectionView.heightAnchor.constraint(equalToConstant: 250),
+           
+            
+        ])
+    }
 }
+
+extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return systemImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LiveMatchCollectionViewCell.identifier, for: indexPath) as! LiveMatchCollectionViewCell
+        cell.configure(backgroundColorName: systemColors[indexPath.row], logo: systemImages[indexPath.row])
+        //cell.backgroundColor = systemColors[indexPath.row]
+        cell.configureMatch(liga: "La Liga", homeTeam: "Real Madrid", awayTeam: "Barselona", homeTeamImage: "real", awayTeamImage: "barsa", time: "1", date: "2", stadium: "Estadio Nacional de Fútbol", city: "Managua")
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        //let size = mainCollectionView.frame.width / 3
+        return CGSize(width: mainCollectionView.frame.width, height: mainCollectionView.frame.height)
+    }
+}
+
