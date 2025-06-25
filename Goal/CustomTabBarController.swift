@@ -53,8 +53,16 @@ final class CustomTabBarController: UIViewController {
         let vc = viewControllers[index]
         addChild(vc)
         containerView.addSubview(vc.view)
-        vc.view.frame = containerView.bounds
-        vc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        vc.view.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(vc.view)
+
+        NSLayoutConstraint.activate([
+            vc.view.topAnchor.constraint(equalTo: containerView.topAnchor),
+            vc.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            vc.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            vc.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
+        
         vc.didMove(toParent: self)
 
         currentVC = vc
